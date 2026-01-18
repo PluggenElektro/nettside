@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Provstrøm og byggestrøm fra Pluggen Elektro - Rask og profesjonell strømforsyning til byggeplasser i Oslo og Viken.">
+    <meta name="keywords" content="provstrøm, byggestrøm, byggeplass, midlertidig strøm, Oslo, Viken, elektriker">
+    <title>Provstrøm & Byggestrøm - Pluggen Elektro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-copper: #E56D33;
+            --dark-copper: #C85A28;
+            --light-copper: #FF8A50;
+            --black: #000000;
+            --cream: #f9f7f4;
+            --dark-gray: #2c3e50;
+            --light-gray: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: #fff;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            color: var(--black);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+            transition: color 0.3s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-copper);
+            background: rgba(229, 109, 51, 0.1);
+        }
+
+        .phone-header {
+            background: var(--primary-copper);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .phone-header:hover {
+            background: var(--dark-copper);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            position: relative;
+            height: 90vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(229, 109, 51, 0.5) 100%),
+                        url('images/hero/provstrom.jpg') center/cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(44, 62, 80, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-copper);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(229, 109, 51, 0.4);
+        }
+
+        .cta-button:hover {
+            background: var(--dark-copper);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(229, 109, 51, 0.6);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--black);
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-copper);
+            border-radius: 2px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: var(--black);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-copper);
+        }
+
+        .service-card h3 {
+            color: var(--black);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--dark-gray);
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-copper);
+            font-weight: bold;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .process-step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--primary-copper);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .process-step h3 {
+            margin-top: 1rem;
+            color: var(--black);
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .process-step p {
+            color: var(--dark-gray);
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            background: var(--cream);
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            background: var(--cream);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #ede9e4;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-copper);
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        /* Image Section */
+        .image-showcase {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .image-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .image-card:hover {
+            transform: scale(1.03);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-copper);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-item-text h3 {
+            color: var(--black);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-text p {
+            color: var(--dark-gray);
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-copper);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: var(--primary-copper);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: var(--dark-copper);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-copper);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-copper);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--black);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logos/Pluggen Elektro.JPG" alt="Pluggen Elektro">
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#tjenester">Tjenester</a></li>
+                <li><a href="solceller.html">Solceller</a></li>
+                <li><a href="provstrom.html">Provstrøm</a></li>
+                <li><a href="jobb.html">Jobb med Oss</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:48884127" class="phone-header">📞 48 88 41 27</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>🔌 Provstrøm & Byggestrøm</h1>
+            <p>Rask og profesjonell strømforsyning til byggeplasser. Vi leverer og installerer komplett provstrøm for prosjekter av alle størrelser.</p>
+            <a href="#kontakt" class="cta-button">Bestill Provstrøm Nå</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Hvorfor Velge Oss?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Rask Utrykning</h3>
+                    <p>Vi kommer raskt ut og setter opp strømforsyning slik at ditt prosjekt kan starte uten forsinkelser. Samme dag eller neste virkedag.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏗️</div>
+                    <h3>Alle Prosjektstørrelser</h3>
+                    <p>Fra små renoveringsprosjekter til store nyanlegg - vi har riktig løsning for deg. Skreddersydde løsninger for hvert prosjekt.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Godkjent og Trygt</h3>
+                    <p>All strømforsyning settes opp i henhold til gjeldende forskrifter og sikkerhetskrav. Autoriserte elektrikere sikrer kvalitet.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Komplett Service</h3>
+                    <p>Vi håndterer søknader, installasjon, vedlikehold og demontering. En totalleverandør for din byggestrøm.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Konkurransedyktige Priser</h3>
+                    <p>Gode priser på både korttids- og langtidsleie av provstrøm. Transparente kostnader uten skjulte avgifter.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Vi er tilgjengelige hele døgnet hvis det skulle oppstå problemer. Rask respons og effektiv problemløsing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Våre Tjenester</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Byggestrøm for Nybygg</h3>
+                    <ul>
+                        <li>Midlertidig strømforsyning under bygging</li>
+                        <li>Skap med flere uttak og effektfordeling</li>
+                        <li>Jordfeilbryter og overspenningsvern</li>
+                        <li>Fleksible løsninger tilpasset prosjektet</li>
+                        <li>Månedlig eller prosjektbasert leie</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Renovering & Ombygging</h3>
+                    <ul>
+                        <li>Provstrøm ved større renoveringer</li>
+                        <li>Sikker strømforsyning under arbeid</li>
+                        <li>Fleksibel plassering av skap</li>
+                        <li>Rask installasjon og demontering</li>
+                        <li>Korttidsleie tilgjengelig</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Anlegg & Infrastruktur</h3>
+                    <ul>
+                        <li>Strøm til store anleggsprosjekter</li>
+                        <li>Høyeffekts strømforsyning ved behov</li>
+                        <li>Flere skap for store byggeplasser</li>
+                        <li>Kraftforsyning til maskiner og utstyr</li>
+                        <li>Langtidskontrakter med gunstige vilkår</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Event & Arrangement</h3>
+                    <ul>
+                        <li>Midlertidig strøm til arrangementer</li>
+                        <li>Festivaler, konserter og utemesser</li>
+                        <li>Fleksible løsninger for utendørs bruk</li>
+                        <li>Rask oppsett og nedrigging</li>
+                        <li>Døgnleie og helgeleie tilgjengelig</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Slik Fungerer Det</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>Ta Kontakt</h3>
+                    <p>Ring oss eller send en forespørsel. Vi kartlegger dine behov og gir deg et tilbud raskt.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>Befaring & Planlegging</h3>
+                    <p>Vi kommer ut for en befaring, vurderer plasseringen og planlegger installasjonen sammen med deg.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>Søknader & Godkjenning</h3>
+                    <p>Vi håndterer alle nødvendige søknader til nettselskap og myndigheter på dine vegne.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3>Installasjon</h3>
+                    <p>Våre autoriserte elektrikere installerer provstrømmen raskt og forskriftsmessig. Vanligvis samme dag eller neste virkedag.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">5</div>
+                    <h3>Prosjektoppfølging</h3>
+                    <p>Vi følger opp underveis, utfører service ved behov, og fjerner anlegget når prosjektet er ferdig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Ofte Stilte Spørsmål</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hvor raskt kan dere levere provstrøm?
+                    </button>
+                    <div class="faq-answer">
+                        <p>I de fleste tilfeller kan vi levere og installere provstrøm samme dag eller neste virkedag, avhengig av tilgjengelighet og prosjektets kompleksitet. Kontakt oss for en nøyaktig tidsramme.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hva koster det å leie provstrøm?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Prisen varierer basert på effektbehov, leieperiode og prosjektets omfang. Vi tilbyr konkurransedyktige priser og kan gi deg et skreddersydd tilbud etter befaring. Kontakt oss for en uforpliktende prisindikasjon.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Trenger jeg tillatelse for å sette opp provstrøm?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, det kreves normalt godkjenning fra nettselskapet. Vi håndterer alle søknader og papirarbeid for deg, slik at du kan fokusere på byggeprosjektet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hvor mye strøm kan jeg få fra provstrømskapet?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard provstrømskap leverer vanligvis 16A, 32A eller 63A avhengig av behov. For større prosjekter kan vi sette opp flere skap eller høyeffektsløsninger. Vi dimensjonerer anlegget basert på ditt faktiske behov.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Hva skjer hvis det oppstår problemer med strømforsyningen?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vi har vakttelefon 24/7 og kommer raskt ut ved eventuelle problemer. Alle våre installasjoner har jordfeilbryter og sikringer som beskytter mot feil og overbelastning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Kan dere også fjerne provstrømmen når prosjektet er ferdig?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, demontering er inkludert i våre tjenester. Vi fjerner alt utstyr forskriftsmessig og sørger for at området er ryddig når vi er ferdige. Gi oss beskjed i god tid når prosjektet nærmer seg slutten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Bestill Provstrøm</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-item-text">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:48884127" style="color: var(--dark-gray); text-decoration: none;">48 88 41 27</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-item-text">
+                            <h3>E-post</h3>
+                            <p><a href="mailto:post@pluggenelektro.no" style="color: var(--dark-gray); text-decoration: none;">post@pluggenelektro.no</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-item-text">
+                            <h3>Område</h3>
+                            <p>Oslo og Viken</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-item-text">
+                            <h3>Åpningstider</h3>
+                            <p>Man-Fre: 07:00 - 16:00<br>Vakttelefon 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <!-- VIKTIG: Erstatt 'YOUR_FORM_ID' med din Formspree form ID -->
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Navn *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-post *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Beskriv ditt prosjekt *</label>
+                            <textarea id="message" name="message" placeholder="Fortell oss om byggeplassen, tidsramme, og effektbehov..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">Send Forespørsel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PLUGGEN ELEKTRO</h3>
+                <p>Din pålitelige elektriker i Oslo og Viken. Vi leverer kvalitet og trygghet i alle våre prosjekter.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tjenester</h3>
+                <ul>
+                    <li><a href="index.html#tjenester">Elektriske Installasjoner</a></li>
+                    <li><a href="solceller.html">Solceller</a></li>
+                    <li><a href="provstrom.html">Provstrøm</a></li>
+                    <li><a href="index.html#tjenester">Smart Hjem</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Snarveier</h3>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="index.html#tjenester">Tjenester</a></li>
+                    <li><a href="index.html#om-oss">Om Oss</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li>📞 48 88 41 27</li>
+                    <li>✉️ post@pluggenelektro.no</li>
+                    <li>📍 Oslo og Viken</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pluggen Elektro. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Takk for din henvendelse! Vi vil kontakte deg snart angående provstrøm.');
+            event.target.reset();
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('nav-menu');
+                menu.classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    // Close all FAQs
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+
+                    // Open clicked FAQ if it wasn't already open
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

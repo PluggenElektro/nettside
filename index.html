@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pluggen Elektro er en elektrikerbedrift som gjør arbeid i Oslo og Viken. Vi tilbyr elektriske installasjoner, solceller, og provstrøm.">
+    <meta name="keywords" content="elektriker, Oslo, Viken, solceller, provstrøm, elektriske installasjoner">
+    <title>Pluggen Elektro - Din Elektriker i Oslo og Viken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-copper: #E56D33;
+            --dark-copper: #C85A28;
+            --light-copper: #FF8A50;
+            --black: #000000;
+            --cream: #f9f7f4;
+            --dark-gray: #2c3e50;
+            --light-gray: #ecf0f1;
+            --accent-orange: #E56D33;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: #fff;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            color: var(--black);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+            transition: color 0.3s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-copper);
+            background: rgba(229, 109, 51, 0.1);
+        }
+
+        .phone-header {
+            background: var(--primary-copper);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .phone-header:hover {
+            background: var(--dark-copper);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            position: relative;
+            height: 90vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%),
+                        url('images/hero/P9220258.JPG') center/cover no-repeat;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(204, 122, 89, 0.45) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-copper);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--dark-copper);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #fafafa 0%, var(--cream) 50%, #fafafa 100%);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(229, 109, 51, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(229, 109, 51, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--black);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-copper) 0%, var(--dark-copper) 100%);
+            border-radius: 3px;
+            box-shadow: 0 2px 10px rgba(229, 109, 51, 0.3);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+            padding: 3rem 2.5rem 2.5rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06),
+                        0 1px 3px rgba(0,0,0,0.08),
+                        inset 0 1px 0 rgba(255,255,255,0.9);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-copper) 0%, var(--light-copper) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(229, 109, 51, 0.02) 0%, rgba(229, 109, 51, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 80px rgba(229, 109, 51, 0.15),
+                        0 5px 15px rgba(0,0,0,0.1),
+                        inset 0 1px 0 rgba(255,255,255,1);
+            border-color: rgba(229, 109, 51, 0.2);
+            background: linear-gradient(to bottom, #ffffff 0%, #fcfcfc 100%);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 18px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--primary-copper), var(--light-copper), var(--dark-copper));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover .service-icon::before {
+            opacity: 1;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.08) translateY(-8px) rotate(5deg);
+            background: linear-gradient(135deg, var(--primary-copper) 0%, var(--dark-copper) 100%);
+            box-shadow: 0 20px 50px rgba(229, 109, 51, 0.35);
+        }
+
+        .service-icon svg {
+            stroke: #ffffff;
+            transition: stroke 0.3s;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .service-card:hover .service-icon svg {
+            stroke: #ffffff;
+        }
+
+        .service-card h3 {
+            color: var(--black);
+            font-size: 1.65rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+        }
+
+        .service-card:hover h3 {
+            color: var(--primary-copper);
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #fff 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h2 {
+            color: var(--black);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-copper);
+            border-radius: 2px;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        .about-text ul {
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .about-text ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--dark-gray);
+            font-size: 1.05rem;
+        }
+
+        .about-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-copper);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Video Showcase Section */
+        .video-showcase {
+            padding: 5rem 2rem;
+            background: var(--black);
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(204, 122, 89, 0.3);
+        }
+
+        .showcase-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Solceller Section */
+        .solceller {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+
+        .solceller-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .solceller-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(34, 139, 34, 0.2) 100%);
+            z-index: 1;
+            animation: overlayPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes overlayPulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .solceller-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .solceller-text {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .solceller-text h2 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .solceller-text p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .solceller-cta {
+            background: #228B22;
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(34, 139, 34, 0.4);
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .solceller-cta:hover {
+            background: #1a6b1a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.6);
+        }
+
+        .solceller-features {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 140px;
+            overflow: visible;
+        }
+
+        .solceller-feature {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .solceller-feature.active {
+            opacity: 1;
+        }
+
+        .solceller-feature h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .solceller-feature p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .feature-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .feature-dot.active {
+            background: #228B22;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        /* Provstrøm Section */
+        .provstrom {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 2rem;
+        }
+
+        .provstrom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .provstrom-text h2 {
+            color: var(--primary-copper);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .provstrom-text p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .provstrom-features {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .provstrom-feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-copper);
+            backdrop-filter: blur(10px);
+        }
+
+        .provstrom-feature h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .provstrom-feature p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .provstrom-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .provstrom-cta {
+            background: var(--primary-copper);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(204, 122, 89, 0.4);
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .provstrom-cta:hover {
+            background: var(--dark-copper);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(204, 122, 89, 0.6);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--primary-copper);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            object-position: center;
+            background: var(--light-copper);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: var(--dark-gray);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-copper);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-item-text h3 {
+            color: var(--black);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-text p {
+            color: var(--dark-gray);
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-copper);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: var(--primary-copper);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: var(--dark-copper);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-copper);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-copper);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solceller-content,
+            .provstrom-content {
+                grid-template-columns: 1fr;
+            }
+
+            .provstrom-image {
+                order: -1;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .benefit-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logos/Pluggen Elektro.JPG" alt="Pluggen Elektro">
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#tjenester">Tjenester</a></li>
+                <li><a href="solceller.html">Solceller</a></li>
+                <li><a href="provstrom.html">Provstrøm</a></li>
+                <li><a href="jobb.html">Jobb med Oss</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:48884127" class="phone-header">📞 48 88 41 27</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hjem">
+        <video autoplay muted loop playsinline class="hero-video" preload="auto" poster="images/hero/P9220258.JPG">
+            <source src="images/hero/Pluggen-Hero.mp4" type="video/mp4">
+            Nettleseren din støtter ikke video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Din Pålitelige Elektriker i Oslo og Viken</h1>
+            <p>Profesjonelle elektriske tjenester for private og bedrifter - Solceller, Provstrøm, og Installasjoner</p>
+            <a href="#kontakt" class="cta-button">Få et Pristilbud</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="tjenester">
+        <div class="container">
+            <h2 class="section-title">Våre Tjenester</h2>
+            <p class="section-subtitle">Profesjonelle elektriske løsninger tilpasset dine behov - fra tradisjonelle installasjoner til moderne fremtidsrettede systemer</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>Elektriske Installasjoner</h3>
+                    <p>Komplette elektriske installasjoner for nybygg, rehabilitering og tilbygg. Vi utfører alt fra enkle stikkontakter til komplette anlegg.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </div>
+                    <h3>Solceller</h3>
+                    <p>Profesjonell installasjon av solcellepaneler. Bli selvforsynt med ren energi og spar penger på strømregningen.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="23"/>
+                            <line x1="15" y1="20" x2="15" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3>Provstrøm</h3>
+                    <p>Rask og effektiv byggestrøm for ditt prosjekt. Vi leverer og installerer komplett strømforsyning til byggeplasser.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Hjem</h3>
+                    <p>Moderne smart hjem-løsninger som gjør hverdagen enklere. Styrbare belysning, varme og sikkerhetssystemer.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Service & Vedlikehold</h3>
+                    <p>Regelmessig vedlikehold og akutt service. Vi holder dine elektriske anlegg i topp stand hele året.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Feilsøking & Reparasjon</h3>
+                    <p>Raskt utrykning ved elektriske feil. Våre erfarne elektrikere finner og løser problemet effektivt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solceller Section -->
+    <section class="solceller" id="solceller" onclick="window.location.href='solceller.html'" style="cursor: pointer;">
+        <video autoplay muted loop playsinline class="solceller-video" preload="auto">
+            <source src="images/hero/Solceller-Bakgrunnsvideo.mp4" type="video/mp4">
+            Nettleseren din støtter ikke video.
+        </video>
+        <div class="solceller-overlay"></div>
+        <div class="solceller-content">
+            <div class="solceller-text">
+                <h2>☀️ Solceller - Bli Selvforsynt med Ren Energi</h2>
+                <p>Profesjonell installasjon av solcellepaneler for både private boliger og næringsbygg. En smart investering som betaler seg selv over tid.</p>
+
+                <a href="solceller.html#kontakt" class="solceller-cta" onclick="event.stopPropagation();">Få Gratis Tilbud på Solceller</a>
+
+                <div class="solceller-features" id="solcellerFeatures">
+                    <div class="solceller-feature active">
+                        <h3>💰 Spar på Strømregningen</h3>
+                        <p>Reduser strømkostnadene dine med opptil 70% og bli uavhengig av strømpriser.</p>
+                    </div>
+                    <div class="solceller-feature">
+                        <h3>🌍 Miljøvennlig</h3>
+                        <p>Bidra til et grønnere miljø med ren, fornybar energi fra solen.</p>
+                    </div>
+                    <div class="solceller-feature">
+                        <h3>📈 Økt Boligverdi</h3>
+                        <p>Solceller øker verdien på eiendommen din og gjør den mer attraktiv.</p>
+                    </div>
+                    <div class="solceller-feature">
+                        <h3>🔧 Komplett Service</h3>
+                        <p>Vi håndterer alt fra kartlegging, søknader til installasjon og vedlikehold.</p>
+                    </div>
+                </div>
+
+                <div class="feature-dots" id="featureDots">
+                    <div class="feature-dot active" data-index="0"></div>
+                    <div class="feature-dot" data-index="1"></div>
+                    <div class="feature-dot" data-index="2"></div>
+                    <div class="feature-dot" data-index="3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provstrøm Section -->
+    <section class="provstrom" id="provstrom" onclick="window.location.href='provstrom.html'" style="cursor: pointer;">
+        <div class="provstrom-content">
+            <div class="provstrom-text">
+                <h2>🔌 Provstrøm & Byggestrøm</h2>
+                <p>Trenger du strømforsyning til byggeplassen? Vi leverer og installerer profesjonell provstrøm og byggestrøm for prosjekter av alle størrelser.</p>
+
+                <div class="provstrom-features">
+                    <div class="provstrom-feature">
+                        <h3>⚡ Rask Utrykning</h3>
+                        <p>Vi kommer raskt ut og setter opp strømforsyning slik at ditt prosjekt kan starte uten forsinkelser.</p>
+                    </div>
+                    <div class="provstrom-feature">
+                        <h3>🏗️ Alle Prosjektstørrelser</h3>
+                        <p>Fra små renoveringsprosjekter til store nyanlegg - vi har riktig løsning for deg.</p>
+                    </div>
+                    <div class="provstrom-feature">
+                        <h3>✅ Godkjent og Trygt</h3>
+                        <p>All strømforsyning settes opp i henhold til gjeldende forskrifter og sikkerhetskrav.</p>
+                    </div>
+                </div>
+
+                <a href="provstrom.html#kontakt" class="provstrom-cta" onclick="event.stopPropagation();">Bestill Provstrøm</a>
+            </div>
+            <div class="provstrom-image">
+                <img src="images/hero/provstrom.jpg" alt="Provstrøm installasjon">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="om-oss">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Om Pluggen Elektro</h2>
+                    <p>Pluggen Elektro er en moderne elektrikerbedrift som leverer tjenester av høy kvalitet til kunder i Oslo og Viken-området. Med mange års erfaring og et team av fagutdannede elektrikere, er vi din foretrukne partner for alle elektriske behov.</p>
+
+                    <p>Vi er spesialister på både tradisjonelle elektriske installasjoner og fremtidsrettede løsninger som solceller og smart hjem-teknologi. Vår tilnærming kombinerer faglig dyktighet med en kundeorientert service.</p>
+
+                    <p>Hos oss får du:</p>
+                    <ul>
+                        <li>Autoriserte og fagutdannede elektrikere</li>
+                        <li>Konkurransedyktige priser</li>
+                        <li>Rask respons og fleksible løsninger</li>
+                        <li>Kvalitetssikret arbeid med garanti</li>
+                        <li>Miljøvennlige løsninger</li>
+                    </ul>
+
+                    <div class="partner-logo">
+                        <img src="images/logos/startbank.png" alt="Partner" style="max-width: 200px; margin-top: 2rem; opacity: 0.8;">
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/hero/P9220258.JPG" alt="Pluggen Elektro arbeid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Fornøyde Kunder</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Prosjekter Fullført</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Års Erfaring</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Kundetilfredshet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Møt Vårt Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/ansatte/Kim Andre Hansen.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Ludvig.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Martin Hansen.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Sondre.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Untitled_Artwork 72.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Untitled_Artwork 74.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Untitled_Artwork 78.jpg" alt="Navn" class="team-photo">
+                    <div class="team-info">
+                        <h3>Navn</h3>
+                        <p>Stilling</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="images/ansatte/Untitled_Artwork 79.jpg" alt="Teammedlem" class="team-photo" onerror="this.style.background='var(--light-copper)'">
+                    <div class="team-info">
+                        <h3>Elektriker</h3>
+                        <p>Autorisert Elektriker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt Oss</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-item-text">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:48884127" style="color: var(--dark-gray); text-decoration: none;">48 88 41 27</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-item-text">
+                            <h3>E-post</h3>
+                            <p><a href="mailto:post@pluggenelektro.no" style="color: var(--dark-gray); text-decoration: none;">post@pluggenelektro.no</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-item-text">
+                            <h3>Område</h3>
+                            <p>Oslo og Viken</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-item-text">
+                            <h3>Åpningstider</h3>
+                            <p>Man-Fre: 07:00 - 16:00<br>Vakttelefon 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <!-- VIKTIG: Erstatt 'YOUR_FORM_ID' med din Formspree form ID -->
+                    <!-- Gå til https://formspree.io og registrer deg gratis, deretter lim inn din form ID her -->
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Navn *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-post *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Melding *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">Send Melding</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PLUGGEN ELEKTRO</h3>
+                <p>Din pålitelige elektriker i Oslo og Viken. Vi leverer kvalitet og trygghet i alle våre prosjekter.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tjenester</h3>
+                <ul>
+                    <li><a href="#tjenester">Elektriske Installasjoner</a></li>
+                    <li><a href="#tjenester">Solceller</a></li>
+                    <li><a href="#tjenester">Provstrøm</a></li>
+                    <li><a href="#tjenester">Smart Hjem</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Snarveier</h3>
+                <ul>
+                    <li><a href="#hjem">Hjem</a></li>
+                    <li><a href="#tjenester">Tjenester</a></li>
+                    <li><a href="#om-oss">Om Oss</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li>📞 48 88 41 27</li>
+                    <li>✉️ post@pluggenelektro.no</li>
+                    <li>📍 Oslo og Viken</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pluggen Elektro. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Takk for din henvendelse! Vi vil kontakte deg snart.');
+            event.target.reset();
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('nav-menu');
+                menu.classList.remove('active');
+            });
+        });
+
+        // Sørg for at videoene lastes og spiller
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.hero-video, .solceller-video');
+
+            videos.forEach(video => {
+                if (video) {
+                    // Force load the video
+                    video.load();
+
+                    // Try to play
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log('Video playing successfully');
+                        }).catch(error => {
+                            console.log('Video autoplay blocked:', error);
+                            // Show poster/fallback image instead
+                            video.style.display = 'none';
+                        });
+                    }
+                }
+            });
+
+            // Also try to play on user interaction
+            document.addEventListener('click', function() {
+                videos.forEach(video => {
+                    if (video.paused) {
+                        video.play().catch(e => console.log('Could not play video:', e));
+                    }
+                });
+            }, { once: true });
+
+            // Solceller features carousel
+            const features = document.querySelectorAll('.solceller-feature');
+            const dots = document.querySelectorAll('.feature-dot');
+            let currentFeature = 0;
+
+            function showFeature(index) {
+                features.forEach(feature => feature.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                features[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentFeature = index;
+            }
+
+            function nextFeature() {
+                const next = (currentFeature + 1) % features.length;
+                showFeature(next);
+            }
+
+            // Auto-rotate features every 3 seconds
+            setInterval(nextFeature, 3000);
+
+            // Click on dots to change feature
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = parseInt(dot.getAttribute('data-index'));
+                    showFeature(index);
+                });
+            });
+        });
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .team-member').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
