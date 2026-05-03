@@ -1599,49 +1599,12 @@ body.theme-green,
 
 /* ---------- Footer ---------- */
 footer {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background:
-        radial-gradient(ellipse at 86% -18%, rgba(229, 109, 51, 0.34), transparent 42%),
-        radial-gradient(ellipse at 12% 92%, rgba(47, 159, 74, 0.18), transparent 38%),
-        linear-gradient(180deg, #111312 0%, #0b0d0c 100%);
+    background: #0b0d0c;
     color: rgba(255, 255, 255, 0.6);
     padding: 5rem 0 1.5rem;
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: -12rem;
-    right: -16vw;
-    width: min(78vw, 920px);
-    height: 31rem;
-    z-index: -1;
-    border-radius: 999px;
-    background:
-        repeating-radial-gradient(ellipse at 34% 74%, rgba(255, 255, 255, 0.22) 0 1px, transparent 2px 24px),
-        linear-gradient(135deg, rgba(255, 181, 41, 0.66), rgba(229, 109, 51, 0.5));
-    transform: rotate(-8deg);
-    opacity: 0.68;
-}
-
-footer::after {
-    content: '';
-    position: absolute;
-    left: -14vw;
-    bottom: -18rem;
-    width: min(62vw, 740px);
-    height: 28rem;
-    z-index: -1;
-    border-radius: 999px;
-    background: linear-gradient(135deg, rgba(47, 159, 74, 0.42), rgba(23, 61, 53, 0.18));
-    transform: rotate(10deg);
-}
-
 .footer-grid {
-    position: relative;
-    z-index: 1;
     max-width: var(--max-w);
     margin: 0 auto 3rem;
     padding: 0 2rem 3rem;
@@ -1649,12 +1612,6 @@ footer::after {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-brand img {
-    height: 44px;
-    width: auto;
-    margin-bottom: 1.25rem;
 }
 
 .footer-brand p {
@@ -1704,8 +1661,6 @@ footer::after {
 }
 
 .footer-bottom {
-    position: relative;
-    z-index: 1;
     text-align: center;
     padding: 0 2rem;
     color: rgba(255, 255, 255, 0.4);
