@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pluggen Elektro - Sertifiserte elektrikere i Oslo og Viken. Elektriske installasjoner, solceller, provstrøm og smart hjem.">
+    <meta name="keywords" content="elektriker, Oslo, Viken, solceller, provstrøm, elektriske installasjoner, smart hjem">
+    <title>Pluggen Elektro — Elektriker i Oslo og Viken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="has-video-hero">
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img class="logo-on-light" src="images/logos/Pluggen-Elektro.png" alt="Pluggen Elektro">
+                <img class="logo-on-dark" src="images/logos/Pluggen-Elektro-OnDark.png" alt="" aria-hidden="true">
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Meny">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="is-current">Hjem</a></li>
+                <li><a href="solceller.html">Solceller</a></li>
+                <li><a href="provstrom.html">Provstrøm</a></li>
+                <li><a href="jobb.html">Jobb</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:48884127" class="phone-header">48 88 41 27</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hjem">
+        <div class="hero-media">
+            <video autoplay muted loop playsinline preload="auto" poster="images/hero/P9220258.JPG">
+                <source src="images/hero/Pluggen-Hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="eyebrow">Elektriker · Oslo & Viken</span>
+            <h1>Strøm du kan <span class="accent">stole på.</span></h1>
+            <p class="hero-lede">Sertifiserte elektrikere som leverer presisjonsarbeid for boliger, næringsbygg og byggeplasser. Fra installasjon til solceller — utført med kvalitet og garanti.</p>
+            <div class="hero-cta">
+                <a href="#kontakt" class="btn btn-primary">Få et pristilbud</a>
+                <a href="#tjenester" class="btn btn-ghost">Se tjenester</a>
+            </div>
+            <ul class="hero-bullets">
+                <li>Autoriserte elektrikere</li>
+                <li>Rask respons</li>
+                <li>Garanti på alt arbeid</li>
+            </ul>
+        </div>
+        <a href="#tjenester" class="hero-scroll-hint">Se mer</a>
+    </section>
+
+    <!-- Services -->
+    <section class="section services-process" id="tjenester">
+        <div class="container">
+            <div class="services-intro">
+                <div class="section-head">
+                    <span class="eyebrow">Tjenester</span>
+                    <h2>Fra første behov til ferdig løsning.</h2>
+                    <p>Enten du trenger et nytt anlegg, ren energi, byggestrøm eller smart styring, jobber vi strukturert: vi kartlegger, planlegger, leverer og følger opp.</p>
+                </div>
+                <div class="services-proof">
+                    <div class="services-proof-item">
+                        <span>01</span>
+                        <strong>Ryddig behovsavklaring</strong>
+                    </div>
+                    <div class="services-proof-item">
+                        <span>02</span>
+                        <strong>Faglig utført arbeid</strong>
+                    </div>
+                    <div class="services-proof-item">
+                        <span>03</span>
+                        <strong>Dokumentert og klart</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-timeline">
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-installasjoner.jpg" alt="Illustrasjon av elektriker som utfører elektrisk installasjon i norsk bolig" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">01 / Installasjoner</span>
+                        <h3>Elektriske installasjoner</h3>
+                        <p>Vi bygger elektriske anlegg som tåler hverdagen. Fra nybygg og tilbygg til rehabilitering, stikk, sikringsskap og komplette tekniske oppgraderinger.</p>
+                        <ul>
+                            <li>Behov, belastning og fremtidige utvidelser vurderes først</li>
+                            <li>Alt monteres ryddig og etter gjeldende forskrift</li>
+                            <li>Du får dokumentasjon på arbeidet når jobben er ferdig</li>
+                        </ul>
+                        <a href="#kontakt" class="service-step-link">Planlegg installasjonen</a>
+                    </div>
+                </article>
+
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-solceller.jpg" alt="Illustrasjon av elektrikerteam som planlegger solceller på norsk bolig" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">02 / Ren energi</span>
+                        <h3>Solceller</h3>
+                        <p>Vi gjør solceller konkret og oversiktlig. Du får hjelp med befaring, beregning, panelplassering, montering og idriftsettelse.</p>
+                        <ul>
+                            <li>Tak, skygge og strømforbruk kartlegges før tilbud</li>
+                            <li>Anlegget dimensjoneres for boligen og forbruket ditt</li>
+                            <li>Ferdig testet løsning kobles mot overvåking og strømnett</li>
+                        </ul>
+                        <a href="solceller.html" class="service-step-link">Se solcelleløpet</a>
+                    </div>
+                </article>
+
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-provstrom.jpg" alt="Illustrasjon av provstrøm og byggestrøm på ryddig byggeplass" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">03 / Byggestrøm</span>
+                        <h3>Provstrøm & byggestrøm</h3>
+                        <p>Byggeplassen trenger strøm som bare fungerer. Vi leverer godkjent midlertidig strømforsyning fra enkel korttidsleie til komplette oppsett.</p>
+                        <ul>
+                            <li>Riktig skap, kabler og kapasitet til prosjektet</li>
+                            <li>Trygg oppkobling, ryddig føring og rask demontering</li>
+                            <li>Løsninger for både små oppussinger og større byggeplasser</li>
+                        </ul>
+                        <a href="provstrom.html" class="service-step-link">Les om provstrøm</a>
+                    </div>
+                </article>
+
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-smart-hjem.jpg" alt="Illustrasjon av smart hjem-løsning i moderne norsk bolig" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">04 / Styring</span>
+                        <h3>Smart hjem</h3>
+                        <p>Lys, varme, lading og sikkerhet blir best når teknikken er enkel å bruke. Vi setter opp smarte løsninger som føles naturlige i hjemmet.</p>
+                        <ul>
+                            <li>Styring av lys, varme, elbillading og sikkerhet</li>
+                            <li>Komponenter velges etter huset, vanene og budsjettet</li>
+                            <li>Vi viser deg hvordan alt brukes før vi drar</li>
+                        </ul>
+                        <a href="#kontakt" class="service-step-link">Snakk om smart hjem</a>
+                    </div>
+                </article>
+
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-vedlikehold-equipment.jpg" alt="Illustrasjon av service og vedlikehold med elbillader, inverter, sikringsskap og sjekkliste" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">05 / Oppfølging</span>
+                        <h3>Service & vedlikehold</h3>
+                        <p>Et godt elektrisk anlegg skal holde seg trygt over tid. Vi hjelper med kontroll, service og forebyggende vedlikehold før små ting blir store.</p>
+                        <ul>
+                            <li>Sikringsskap, ladere, invertere og installasjoner kontrolleres</li>
+                            <li>Vi finner slitasje og feil før de skaper problemer</li>
+                            <li>Fast oppfølging kan avtales ved behov</li>
+                        </ul>
+                        <a href="#kontakt" class="service-step-link">Avtal service</a>
+                    </div>
+                </article>
+
+                <article class="service-step">
+                    <div class="service-step-media">
+                        <img src="images/services/service-feilsoking-diagnostic.jpg" alt="Illustrasjon av feilsøking med måleutstyr, termisk visning og sikringsskap" loading="lazy">
+                    </div>
+                    <div class="service-step-copy">
+                        <span class="service-step-number">06 / Feilsøking</span>
+                        <h3>Feilsøking & reparasjon</h3>
+                        <p>Når noe stopper, blinker eller lukter feil, handler det om å finne årsaken raskt. Vi feilsøker systematisk og reparerer trygt.</p>
+                        <ul>
+                            <li>Feil lokaliseres med måling, erfaring og riktig utstyr</li>
+                            <li>Du får forklart hva som skjer og hva som bør gjøres</li>
+                            <li>Vi rykker ut når problemet haster</li>
+                        </ul>
+                        <a href="#kontakt" class="service-step-link">Få hjelp raskt</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solceller showcase (new video, lazy-played in view) -->
+    <section class="showcase theme-green" id="solceller">
+        <div class="showcase-media">
+            <video muted loop playsinline preload="metadata" data-play-on-view>
+                <source src="images/hero/Solceller-Scroll.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="showcase-overlay"></div>
+        <div class="showcase-content">
+            <div class="showcase-text">
+                <span class="eyebrow">Solenergi</span>
+                <h2>Bli selvforsynt med <span class="accent">ren energi.</span></h2>
+                <p>Profesjonell installasjon av solcellepaneler for boliger og næringsbygg. En investering som betaler seg selv — og øker verdien på eiendommen.</p>
+                <ul class="showcase-features">
+                    <li><span><strong>Spar opptil 70%</strong> på strømregningen</span></li>
+                    <li><span><strong>25+ års garanti</strong> på panelene</span></li>
+                    <li><span><strong>Nøkkelferdig</strong> — vi tar søknad og installasjon</span></li>
+                </ul>
+                <a href="solceller.html" class="btn btn-primary">Les mer om solceller</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provstrøm showcase -->
+    <section class="showcase" id="provstrom">
+        <div class="showcase-media">
+            <img src="images/hero/provstrom-temporary-power-site.jpg" alt="Illustrasjon av provstrøm og midlertidig strømforsyning på byggeplass">
+        </div>
+        <div class="showcase-overlay showcase-overlay--right"></div>
+        <div class="showcase-content showcase-content--right">
+            <div class="showcase-text">
+                <span class="eyebrow">Byggestrøm</span>
+                <h2>Provstrøm <span class="accent">når du trenger det.</span></h2>
+                <p>Rask, godkjent strømforsyning til byggeplasser, renoveringsprosjekter og arrangementer. Vi rigger opp og demonterer — du kan jobbe.</p>
+                <ul class="showcase-features">
+                    <li><span><strong>Rask utrykning</strong> — samme dag eller neste virkedag</span></li>
+                    <li><span><strong>Alle prosjektstørrelser</strong> — fra renovering til store anlegg</span></li>
+                    <li><span><strong>Godkjent</strong> etter alle gjeldende forskrifter</span></li>
+                </ul>
+                <a href="provstrom.html" class="btn btn-primary">Bestill provstrøm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--bone" id="om-oss">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="eyebrow">Om oss</span>
+                    <h2 style="font-size: clamp(2rem, 3.6vw, 2.85rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 1.5rem;">Fagutdannet, nøye, til å stole på.</h2>
+                    <p>Pluggen Elektro er en moderne elektrikerbedrift som leverer kvalitetstjenester til kunder i Oslo og Viken-området. Med mange års erfaring og et team av autoriserte fagfolk er vi din foretrukne partner for alle elektriske behov.</p>
+                    <p>Vi spesialiserer oss på både tradisjonelle elektriske installasjoner og fremtidsrettede løsninger som solceller og smart hjem-teknologi. Vår tilnærming kombinerer faglig dyktighet med kundeorientert service.</p>
+                    <ul>
+                        <li>Autoriserte elektrikere</li>
+                        <li>Konkurransedyktige priser</li>
+                        <li>Rask respons</li>
+                        <li>Garanti på alt arbeid</li>
+                        <li>Miljøvennlige løsninger</li>
+                        <li>Ryddig oppfølging</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/hero/P9220258.JPG" alt="Pluggen Elektro arbeid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500<span class="unit">+</span></h3>
+                    <p>Fornøyde kunder</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000<span class="unit">+</span></h3>
+                    <p>Prosjekter levert</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10<span class="unit">+</span></h3>
+                    <p>Års erfaring</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100<span class="unit">%</span></h3>
+                    <p>Dokumentert arbeid</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section--white" id="team">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="eyebrow">Teamet</span>
+                <h2>Møt elektrikerne våre.</h2>
+                <p>Et lite team av faglærte elektrikere som tar stolthet i kvaliteten på arbeidet sitt.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/ansatte/brand/kim-andre-hansen-brand.jpg" alt="Kim Andre Hansen" class="team-photo">
+                    <div class="team-info">
+                        <h3>Kim Andre Hansen</h3>
+                        <p>Elektriker</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/ludvig-brand.jpg" alt="Ludvig" class="team-photo">
+                    <div class="team-info">
+                        <h3>Ludvig</h3>
+                        <p>Elektriker</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/martin-hansen-brand.jpg" alt="Martin Hansen" class="team-photo">
+                    <div class="team-info">
+                        <h3>Martin Hansen</h3>
+                        <p>Elektriker</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/sondre-brand.jpg" alt="Sondre" class="team-photo">
+                    <div class="team-info">
+                        <h3>Sondre</h3>
+                        <p>Elektriker</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/elektriker-72-brand.jpg" alt="Teammedlem" class="team-photo">
+                    <div class="team-info">
+                        <h3>Elektriker</h3>
+                        <p>Autorisert</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/elektriker-74-brand.jpg" alt="Teammedlem" class="team-photo">
+                    <div class="team-info">
+                        <h3>Elektriker</h3>
+                        <p>Autorisert</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="images/ansatte/brand/elektriker-78-brand.jpg" alt="Teammedlem" class="team-photo">
+                    <div class="team-info">
+                        <h3>Elektriker</h3>
+                        <p>Autorisert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--bone" id="kontakt">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="eyebrow">Kontakt</span>
+                <h2>Få et gratis pristilbud.</h2>
+                <p>Fortell oss om prosjektet — vi svarer som regel innen 24 timer.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="eyebrow">Pluggen Elektro</span>
+                    <h3 class="contact-info-title">Vi er her for å hjelpe.</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:48884127">48 88 41 27</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>E-post</h4>
+                            <p><a href="mailto:post@pluggenelektro.no">post@pluggenelektro.no</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Område</h4>
+                            <p>Oslo og Viken</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Åpningstider</h4>
+                            <p>Man–Fre 07:00–16:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 class="form-title">Send forespørsel</h3>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Navn</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Melding</label>
+                            <textarea id="message" name="message" placeholder="Fortell oss om prosjektet ditt…" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send forespørsel →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section footer-brand">
+                <img src="images/logos/Pluggen-Elektro-OnDark.png" alt="Pluggen Elektro">
+                <p>Din pålitelige elektriker i Oslo og Viken. Solceller, provstrøm og smart hjem — utført av autoriserte fagfolk.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Tjenester</h3>
+                <ul>
+                    <li><a href="#tjenester">Installasjoner</a></li>
+                    <li><a href="solceller.html">Solceller</a></li>
+                    <li><a href="provstrom.html">Provstrøm</a></li>
+                    <li><a href="#tjenester">Smart hjem</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Selskap</h3>
+                <ul>
+                    <li><a href="#om-oss">Om oss</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="jobb.html">Jobb hos oss</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="tel:48884127">48 88 41 27</a></li>
+                    <li><a href="mailto:post@pluggenelektro.no">post@pluggenelektro.no</a></li>
+                    <li>Oslo og Viken</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2024 Pluggen Elektro</div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

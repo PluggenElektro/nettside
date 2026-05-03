@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solceller fra Pluggen Elektro - Profesjonell installasjon i Oslo og Viken. Spar opptil 70% på strømregningen og bli selvforsynt med ren energi.">
+    <meta name="keywords" content="solceller, solcellepaneler, Oslo, Viken, ren energi, strømsparing, solenergi">
+    <title>Solceller — Pluggen Elektro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="has-video-hero theme-green">
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img class="logo-on-light" src="images/logos/Pluggen-Solceller-Green.png" alt="Pluggen Solceller">
+                <img class="logo-on-dark" src="images/logos/Pluggen-Solceller-Green-OnDark.png" alt="" aria-hidden="true">
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Meny">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="solceller.html" class="is-current">Solceller</a></li>
+                <li><a href="provstrom.html">Provstrøm</a></li>
+                <li><a href="jobb.html">Jobb</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:48884127" class="phone-header">48 88 41 27</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-media">
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="images/hero/Solceller-Bakgrunnsvideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="eyebrow">Solenergi · Sertifiserte elektrikere</span>
+            <h1>Bli selvforsynt med <span class="accent">ren energi.</span></h1>
+            <p class="hero-lede">Profesjonell installasjon av solcellepaneler for boliger og næringsbygg i Oslo og Viken. Reduser strømregningen og øk verdien på eiendommen din.</p>
+            <div class="hero-cta">
+                <a href="#kontakt" class="btn btn-primary">Få gratis tilbud</a>
+                <a href="tel:48884127" class="btn btn-ghost">Ring 48 88 41 27</a>
+            </div>
+            <ul class="hero-bullets">
+                <li>Spar opptil 70%</li>
+                <li>25+ års garanti</li>
+                <li>Nøkkelferdig løsning</li>
+                <li>Autoriserte elektrikere</li>
+            </ul>
+        </div>
+        <a href="#ren-energi" class="hero-scroll-hint">Ren hverdag</a>
+    </section>
+
+    <!-- Clean Energy Lifestyle -->
+    <section class="section clean-energy" id="ren-energi">
+        <div class="container clean-energy-grid">
+            <div class="clean-energy-copy">
+                <span class="eyebrow">Renere hverdag</span>
+                <h2>Alt føles litt bedre når energien er ren.</h2>
+                <p class="clean-energy-lede">Det er noe eget med å vite at huset ditt henter kraften sin fra lyset over taket. Ikke som en stor fanfare, men som en roligere følelse i alt som allerede skjer hjemme.</p>
+                <p>Morgenkaffen, gulvvarmen, vaskemaskinen som går mens sola står høyt, elbilen som lades før neste tur. De samme vanene, bare lettere å like. Når strømmen er ren, føles hverdagen litt ryddigere, litt smartere og litt mer på lag med stedet du bor.</p>
+                <div class="clean-energy-moments">
+                    <article class="clean-energy-moment">
+                        <span>01</span>
+                        <h3>Morgen uten bismak</h3>
+                        <p>Kaffe, lys og varme starter dagen med energi du selv er med på å produsere.</p>
+                    </article>
+                    <article class="clean-energy-moment">
+                        <span>02</span>
+                        <h3>Huset jobber med deg</h3>
+                        <p>Tak, teknikk og forbruk spiller sammen, stille og effektivt gjennom hele dagen.</p>
+                    </article>
+                    <article class="clean-energy-moment">
+                        <span>03</span>
+                        <h3>Mer overskudd hjemme</h3>
+                        <p>Lavere kjøpt strøm og høyere egenproduksjon gir en hverdag som føles mer gjennomtenkt.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="clean-energy-media" aria-label="Norske boliger med solcellepaneler">
+                <figure class="clean-energy-photo clean-energy-photo--main">
+                    <img src="images/solar-lifestyle/norwegian-solar-home.jpg" alt="Norsk enebolig med solcellepaneler, treterrasse og grønn hage" loading="lazy">
+                </figure>
+                <figure class="clean-energy-photo clean-energy-photo--top">
+                    <img src="images/solar-lifestyle/clean-energy-home.jpg" alt="Hvitt norsk hus med solcellepaneler omgitt av skog" loading="lazy">
+                </figure>
+                <figure class="clean-energy-photo clean-energy-photo--bottom">
+                    <img src="images/solar-lifestyle/solar-neighborhood.jpg" alt="Norsk boligområde med flere takmonterte solcelleanlegg" loading="lazy">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section process-section" id="prosess">
+        <div class="container">
+            <div class="process-intro">
+                <div class="section-head">
+                    <span class="eyebrow">Prosess</span>
+                    <h2>Fra befaring til ferdig anlegg.</h2>
+                    <p>Solceller skal føles enkelt å velge. Vi gjør jobben konkret fra første samtale, med tydelige beregninger, ryddig installasjon og oppfølging etter at anlegget produserer.</p>
+                </div>
+                <div class="process-proof">
+                    <div class="process-proof-item">
+                        <span>01</span>
+                        <strong>Fast kontaktperson</strong>
+                    </div>
+                    <div class="process-proof-item">
+                        <span>02</span>
+                        <strong>Dokumentert løsning</strong>
+                    </div>
+                    <div class="process-proof-item">
+                        <span>03</span>
+                        <strong>Ferdig testet anlegg</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-timeline">
+                <article class="process-step">
+                    <div class="process-step-media">
+                        <img src="images/process/solar-process-befaring-open.jpg" alt="Illustrasjon av elektrikerteam som vurderer norsk bolig for solceller" loading="lazy">
+                    </div>
+                    <div class="process-step-copy">
+                        <span class="process-step-number">01 / Befaring</span>
+                        <h3>Vi ser huset, ikke bare taket.</h3>
+                        <p>På befaringen kartlegger vi solforhold, taktype, sikringsskap, forbruksmønster og hva du ønsker å få ut av anlegget. Målet er å finne en løsning som passer boligen og hverdagen din.</p>
+                        <ul>
+                            <li>Takvinkel, skygge og plassering vurderes på stedet</li>
+                            <li>Vi går gjennom strømforbruk og ønsket egenproduksjon</li>
+                            <li>Du får ærlige råd om hva som lønner seg</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step-media">
+                        <img src="images/process/solar-process-planning-open.jpg" alt="Illustrasjon av planlegging av solcelleanlegg med nettbrett og takskisse" loading="lazy">
+                    </div>
+                    <div class="process-step-copy">
+                        <span class="process-step-number">02 / Planlegging</span>
+                        <h3>Du får tallene før du tar valget.</h3>
+                        <p>Vi lager et ryddig tilbud med panelplassering, forventet produksjon, komponentvalg og praktisk fremdrift. Søknader og tekniske avklaringer håndteres av oss.</p>
+                        <ul>
+                            <li>Produksjonsestimat basert på boligen din</li>
+                            <li>Forslag til paneler, inverter og eventuell batteriklargjøring</li>
+                            <li>Plan for montasje, sikkerhet og nettilknytning</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step-media">
+                        <img src="images/process/solar-process-installation-open.jpg" alt="Illustrasjon av elektrikerteam som monterer solcellepaneler på norsk hustak" loading="lazy">
+                    </div>
+                    <div class="process-step-copy">
+                        <span class="process-step-number">03 / Montering</span>
+                        <h3>Presist arbeid, ryddig gjennomført.</h3>
+                        <p>Montasjen gjøres av fagfolk som jobber trygt, effektivt og pent. Vi beskytter taket, legger kabler ryddig og sørger for at installasjonen ser like gjennomført ut som den fungerer.</p>
+                        <ul>
+                            <li>Feste, paneler og kabling monteres etter gjeldende krav</li>
+                            <li>Autoriserte elektrikere tar den elektriske installasjonen</li>
+                            <li>Vi rydder opp og holder deg orientert underveis</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step-media">
+                        <img src="images/process/solar-process-commissioning-open.jpg" alt="Illustrasjon av testing av inverter og ferdig solcelleanlegg" loading="lazy">
+                    </div>
+                    <div class="process-step-copy">
+                        <span class="process-step-number">04 / Idriftsettelse</span>
+                        <h3>Alt testes før du tar det i bruk.</h3>
+                        <p>Når panelene er på plass, kobler vi anlegget til, tester produksjon og sikkerhet, og viser deg hvordan systemet fungerer. Du skal vite hva som skjer på taket og i appen.</p>
+                        <ul>
+                            <li>Inverter, vern og måling kontrolleres</li>
+                            <li>Anlegget settes opp mot overvåking og strømnett</li>
+                            <li>Du får en enkel gjennomgang av bruk og oppfølging</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="process-step">
+                    <div class="process-step-media">
+                        <img src="images/process/solar-process-service-open.jpg" alt="Illustrasjon av ferdig solcelleanlegg der kunde og elektriker følger med på produksjon" loading="lazy">
+                    </div>
+                    <div class="process-step-copy">
+                        <span class="process-step-number">05 / Oppfølging</span>
+                        <h3>Vi slipper ikke taket når sola starter.</h3>
+                        <p>Et solcelleanlegg skal levere i mange år. Derfor er vi tilgjengelige for spørsmål, service og kontroll, og hjelper deg med å få mest mulig ut av produksjonen over tid.</p>
+                        <ul>
+                            <li>Support hvis noe virker uklart eller stopper</li>
+                            <li>Service og ettersyn ved behov</li>
+                            <li>Råd om smart styring, lading og videre utvidelser</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>200<span class="unit">+</span></h3>
+                    <p>Anlegg installert</p>
+                </div>
+                <div class="stat-item">
+                    <h3>70<span class="unit">%</span></h3>
+                    <p>Snitt strømsparing</p>
+                </div>
+                <div class="stat-item">
+                    <h3>25<span class="unit">+</span></h3>
+                    <p>Års garantitid</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100<span class="unit">%</span></h3>
+                    <p>Dokumentert leveranse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--white">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">FAQ</span>
+                <h2>Ofte stilte spørsmål.</h2>
+                <p>Det vi får mest spørsmål om. Mangler noe? Ring oss eller send en melding.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Hvor mye kan jeg spare på solceller?</button>
+                    <div class="faq-answer">
+                        <p>Besparelsen avhenger av takets størrelse, solforhold og ditt energiforbruk. Gjennomsnittlig kan man spare 50–70% på strømregningen. Vi gir deg en nøyaktig beregning under befaringen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Hvor lang tid tar en installasjon?</button>
+                    <div class="faq-answer">
+                        <p>En standard installasjon tar vanligvis 1–3 dager avhengig av anleggets størrelse. Vi jobber effektivt for å minimere ulemper for deg.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Fungerer solceller på vinteren?</button>
+                    <div class="faq-answer">
+                        <p>Ja. Solceller produserer strøm fra sollys, ikke varme. Selv på kalde, klare vinterdager produseres energi. Produksjonen er høyest om sommeren, men du har nytte av anlegget hele året.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Trenger solcellene vedlikehold?</button>
+                    <div class="faq-answer">
+                        <p>Solceller krever minimalt vedlikehold. Regn vasker vanligvis panelene naturlig. Vi anbefaler en årlig inspeksjon for å sikre optimal ytelse.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Får jeg støtte til solceller?</button>
+                    <div class="faq-answer">
+                        <p>Ja, det finnes støtteordninger fra Enova og lokale myndigheter. Vi hjelper deg med å søke og orienterer om de beste ordningene.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Hvor lenge varer solcellene?</button>
+                    <div class="faq-answer">
+                        <p>Kvalitetssolceller har forventet levetid på 25–30 år eller mer. De fleste produsenter gir 25 års ytelsesgaranti hvor panelene garanteres å produsere minst 80% av opprinnelig kapasitet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--bone" id="kontakt">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="eyebrow">Kontakt</span>
+                <h2>Få et gratis tilbud.</h2>
+                <p>Fortell oss om prosjektet ditt — vi svarer som regel innen 24 timer.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="eyebrow">Pluggen Elektro</span>
+                    <h3 class="contact-info-title">Vi er her for å hjelpe.</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:48884127">48 88 41 27</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>E-post</h4>
+                            <p><a href="mailto:post@pluggenelektro.no">post@pluggenelektro.no</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Område</h4>
+                            <p>Oslo og Viken</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Åpningstider</h4>
+                            <p>Man–Fre 07:00–16:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 class="form-title">Send forespørsel</h3>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Navn</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Melding</label>
+                            <textarea id="message" name="message" placeholder="Fortell oss om prosjektet ditt…" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send forespørsel →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section footer-brand">
+                <img src="images/logos/Pluggen-Elektro-OnDark.png" alt="Pluggen Elektro">
+                <p>Din pålitelige elektriker i Oslo og Viken. Solceller, provstrøm og smart hjem — utført av autoriserte fagfolk.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Tjenester</h3>
+                <ul>
+                    <li><a href="index.html#tjenester">Installasjoner</a></li>
+                    <li><a href="solceller.html">Solceller</a></li>
+                    <li><a href="provstrom.html">Provstrøm</a></li>
+                    <li><a href="index.html#tjenester">Smart hjem</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Selskap</h3>
+                <ul>
+                    <li><a href="index.html#om-oss">Om oss</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="jobb.html">Jobb hos oss</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="tel:48884127">48 88 41 27</a></li>
+                    <li><a href="mailto:post@pluggenelektro.no">post@pluggenelektro.no</a></li>
+                    <li>Oslo og Viken</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2024 Pluggen Elektro</div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
